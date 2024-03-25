@@ -1,137 +1,164 @@
-var firstName = prompt("Enter your first name:");
-var lastName = prompt("Enter your last name:");
-var fullName = firstName + " " + lastName;
-alert("Hello, " + fullName + "!");
+// 1. Correcting statement
+var allLower = userInput.toLowerCase();
 
-var favoritePhoneModel = prompt("Enter your favorite phone model:");
-var lengthOfString = favoritePhoneModel.length;
-document.write("My favorite phone is: " + favoritePhoneModel + "<br>");
-document.write("Length of string: " + lengthOfString);
+// 2. Convert x to lower-case
+var x = "Hello World";
+x = x.toLowerCase();
 
-var word = "Pakistani";
-var index = word.indexOf("n");
-document.write("String: " + word + "<br>");
-document.write("Index of 'n': " + index);
+// 3. Convert y to upper-case
+var y = "hello world";
+y = y.toUpperCase();
 
-var word = "Hello World";
-var lastIndex = word.lastIndexOf("l");
-document.write("String: " + word + "<br>");
-document.write("Last index of 'l': " + lastIndex);
+// 4. Convert a variable to lower-case and assign to a new variable
+var originalString = "Hello World";
+var lowerCaseString = originalString.toLowerCase();
 
-var word = "Pakistani";
-var character = word.charAt(3);
-document.write("String: " + word + "<br>");
-document.write("Character at 3rd index: " + character);
-
-var firstName = prompt("Enter your first name:");
-var lastName = prompt("Enter your last name:");
-var fullName = firstName.concat(" ", lastName);
-alert("Hello, " + fullName + "!");
-
-var city = "Hyderabad";
-var newCity = city.replace("Hyder", "Islam");
-document.write("City: " + newCity);
-
-var message = "Ali and Sami are best friends. They play cricket and football together.";
-var newMessage = message.replace(/and/g, "&");
-document.write("Original Message: " + message + "<br>");
-document.write("Modified Message: " + newMessage);
-
-var str = "472";
-var num = parseInt(str);
-document.write("Value: " + num + "<br>");
-document.write("Type: " + typeof(num));
-
-var userInput = prompt("Enter a string:");
-var upperCase = userInput.toUpperCase();
-document.write("User Input: " + userInput + "<br>");
-document.write("Upper Case: " + upperCase);
-
-var num = 35.36;
-var str = num.toString().replace(".", "");
-document.write("Number: " + num + "<br>");
-document.write("Result: " + str);
-
-var username = prompt("Enter your username:");
-var isValid = /^[a-zA-Z0-9]+$/.test(username);
-if (!isValid) {
-    alert("Please enter a valid username without special symbols.");
-}
-
-var A = ["cake", "apple pie", "cookie", "chips", "patties"];
-var searchItem = prompt("Enter an item to search:");
-var found = A.indexOf(searchItem.toLowerCase()) !== -1;
-if (found) {
-    alert(searchItem + " is available at index " + A.indexOf(searchItem.toLowerCase()) + " in our bakery.");
-} else {
-    alert(searchItem + " is not available in our bakery.");
-}
-
-var password = prompt("Enter your password:");
-var hasAlphabetsAndNumbers = /[a-zA-Z]+/.test(password) && /[0-9]+/.test(password);
-var doesNotStartWithNumber = isNaN(password.charAt(0));
-var isAtLeastSixCharactersLong = password.length >= 6;
-if (!hasAlphabetsAndNumbers || !doesNotStartWithNumber || !isAtLeastSixCharactersLong) {
-    alert("Please enter a valid password.");
-}
-
-var userInput = prompt("Enter a string:");
-var lastCharacter = userInput.charAt(userInput.length - 1);
-alert("Last character of input: " + lastCharacter);
-
-var text = "The quick brown fox jumps over the lazy dog";
-var word = "the";
-var count = text.toLowerCase().split(word).length - 1;
-document.write("Text: " + text + "<br>");
-document.write("There are " + count + " occurrence(s) of word '" + word + "'");
-
-// 1. Slice "ap" out of the string "captain"
+// 5. Convert array element to lower-case and assign it to a variable
 var sameWords = "captain";
-var sliced = sameWords.slice(1, 3);
+var slicedWord = sameWords.slice(1, 3);
 
-// 2. Find the number of characters in a string
+// 6. Slice "ap" from "captain"
+var slicedWord = sameWords.slice(1, 3);
+
+// 7. Number of characters in a string
 var strLength = sameWords.length;
 
-// 3. Slice four middle characters out of the string "elephant"
+// 8. Slice middle characters from "elephant"
 var animal = "elephant";
-var seg = animal.slice(1, 5);
+var seg = animal.slice(2, -2);
 
-// 4. Find the number of characters in a string represented by a variable
-var variable = "exampleString";
-var lengthOfVariable = variable.length;
+// 9. Find number of characters in a variable's string
+var variableString = "example";
+var numOfChars = variableString.length;
 
-// 5. Measure the number of characters and slice all but the first and last 3 characters of a string
-var str = "exampleString";
-var charactersCount = str.length;
-var slicedString = str.slice(1, -3);
+// 10. Slice a string and assign to a new variable
+var slicedVariable = variableString.slice(1, -3);
 
-// 6. Find the index of "be" in the string "To be or not to be."
+// 11. Index of "be" in a string
 var text = "To be or not to be.";
-var indx = text.indexOf("be"); // Value of indx is 3
+var indx = text.indexOf("be");
 
-// 7. Find the last index of "be" in the string "To be or not to be."
-var indx = text.lastIndexOf("be"); // Value of indx is 15
+// 12. Last index of "be" in a string
+var indx = text.lastIndexOf("be");
 
-// 8. Find the index of the first character of the last instance of "go" in the string
+// 13. Index of the first character of the last instance of "go"
 var indx = text.lastIndexOf("go");
 
-// 9. If statement to check if a segment exists in a string
-if (str.includes(segment)) {
-    // Code block if segment exists
+// 14. First line of an if statement to test if a segment exists in a string
+if (text.indexOf(segment) !== -1) {
+    // segment exists
 }
 
-// 10. Find the character at index 2 in the string "abcde"
-var str = "abcde";
-var characterAtIndex2 = str.charAt(2); // Character is "c"
+// 15. Character at index 2 in "abcde"
+var charAtIndex2 = "abcde".charAt(2);
 
-// 11. Find the 10th character in the string represented by text
-var text = "exampleText";
-var cha = text.charAt(9); // Assigns the 10th character to variable cha
+// 16. 10th character in the string represented by text
+var cha = text.charAt(9);
 
-// 12. Find the last character in the string represented by str
-var str = "exampleString";
-var x = str.charAt(str.length - 1); // Assigns the last character to variable x
+// 17. Last character in a string
+var str = "example";
+var x = str.charAt(str.length - 1);
 
-// 13. Find the 5th character in a string represented by input
-var input = "exampleInput";
-var cha = input.charAt(4); // Assigns the 5th character to variable cha
+// 18. 5th character in a string represented by input
+var input = "example";
+var cha = input.charAt(4);
+
+// 19. Display upper-case version of a variable
+var upperCaseVariable = variable.toUpperCase();
+alert(upperCaseVariable);
+
+// 20. Convert cityName to Capitalisation
+var cityName = "kaRacHi";
+cityName = cityName.charAt(0).toUpperCase() + cityName.slice(1).toLowerCase();
+// Taking input from the user
+var number = parseFloat(prompt("Enter a positive number:"));
+
+// Displaying the number
+document.write("Number Value: " + number + "<br>");
+
+// Round off value
+var roundValue = Math.round(number);
+document.write("Round off value: " + roundValue + "<br>");
+
+// Floor value
+var floorValue = Math.floor(number);
+document.write("Floor value: " + floorValue + "<br>");
+
+// Ceil value
+var ceilValue = Math.ceil(number);
+document.write("Ceil value: " + ceilValue + "<br>");
+// Taking input from the user
+var number = parseFloat(prompt("Enter a negative floating point number:"));
+
+// Displaying the number
+document.write("Number: " + number + "<br>");
+
+// Round off value
+var roundValue = Math.round(number);
+document.write("Round off value: " + roundValue + "<br>");
+
+// Floor value
+var floorValue = Math.floor(number);
+document.write("Floor value: " + floorValue + "<br>");
+
+// Ceil value
+var ceilValue = Math.ceil(number);
+document.write("Ceil value: " + ceilValue + "<br>");
+// Taking input from the user
+var number = parseFloat(prompt("Enter a number:"));
+
+// Calculating absolute value
+var absoluteValue = Math.abs(number);
+
+// Displaying the absolute value
+document.write("The absolute value of " + number + " is " + absoluteValue);
+// Generating a random number between 1 and 6 to simulate a dice
+var diceValue = Math.floor(Math.random() * 6) + 1;
+
+// Displaying the value of the dice
+document.write("Random dice value: " + diceValue);
+// Generating a random number between 1 and 2 to simulate a coin toss
+var coinValue = Math.floor(Math.random() * 2) + 1;
+
+// Displaying the value of the coin
+if (coinValue === 1) {
+    document.write("Random coin value: Heads");
+} else {
+    document.write("Random coin value: Tails");
+}
+// Generating a random number between 1 and 100
+var randomNumber = Math.floor(Math.random() * 100) + 1;
+
+// Displaying the random number
+document.write("Random number between 1 and 100: " + randomNumber);
+// Generating a random number between 1 and 2 to simulate a coin toss
+var coinValue = Math.floor(Math.random() * 2) + 1;
+
+// Displaying the value of the coin
+if (coinValue === 1) {
+    document.write("Random coin value: Heads");
+} else {
+    document.write("Random coin value: Tails");
+}
+// Generating a random number between 1 and 100
+var randomNumber = Math.floor(Math.random() * 100) + 1;
+
+// Displaying the random number
+document.write("Random number between 1 and 100: " + randomNumber);
+// Generating a random weight between 50 and 100 kg
+var weight = Math.floor(Math.random() * 51) + 50;
+
+// Displaying the weight of the user
+document.write("The weight of the user is: " + weight + " kg");
+// Storing a random secret number between 1 and 10
+var secretNumber = Math.floor(Math.random() * 10) + 1;
+
+// Asking the user to input a number between 1 and 10
+var userGuess = parseInt(prompt("Guess a number between 1 and 10:"));
+
+// Checking if the user's input equals the secret number
+if (userGuess === secretNumber) {
+    document.write("Congratulations! You guessed the secret number.");
+} else {
+    document.write("Sorry, the secret number was " + secretNumber + ". Try again!");
+}
